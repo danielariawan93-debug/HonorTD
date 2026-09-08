@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d10">
+  <title>HonorTD — First Person Tower Defense</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <main id="screen" aria-live="polite">
+      <section id="home" class="screen-panel active">
+        <div class="menu-card">
+          <div class="eyebrow">FIRST PERSON TOWER DEFENSE</div>
+          <h1>HONOR<span>TD</span></h1>
+          <p class="subtitle">Defend the tower.</p>
+          <div class="menu-buttons">
+            <button data-action="play">PLAY</button>
+            <button data-action="settings">SETTING</button>
+            <button data-action="support">SUPPORT</button>
+          </div>
+          <div class="version">Prototype 0.1</div>
+        </div>
+      </section>
+
+      <section id="settings" class="screen-panel">
+        <div class="page-card">
+          <button class="back" data-action="home">← BACK</button>
+          <h2>SETTING</h2>
+          <div class="setting-row"><span>Sound</span><button class="toggle on" data-setting="sound">ON</button></div>
+          <div class="setting-row"><span>Vibration</span><button class="toggle on" data-setting="vibration">ON</button></div>
+        </div>
+      </section>
+
+      <section id="support" class="screen-panel">
+        <div class="page-card">
+          <button class="back" data-action="home">← BACK</button>
+          <h2>SUPPORT CREATOR</h2>
+          <p>Support the development of HonorTD.</p>
+          <div class="support-placeholder">Support page placeholder<br><small>Donation / creator links will be added later.</small></div>
+        </div>
+      </section>
+
+      <section id="game" class="screen-panel game-panel">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        <div class="game-ui">
+          <div class="top-left"><b>WAVE <span id="wave">1</span></b><span>Enemies: <span id="enemyCount">0</span></span><div class="bar"><i id="towerHp" style="width:100%"></i></div><small>Tower HP 100 / 100</small></div>
+          <div class="view-indicator">180° VIEW <span id="angle">0°</span></div>
+          <div class="crosshair">+</div>
+          <div class="weapon-bar" id="weaponBar"></div>
+          <button class="game-back" data-action="home">MENU</button>
+          <div class="hint">A / D or drag: look · Click / tap: attack · 1–4: weapons</div>
+        </div>
+      </section>
+
+      <div id="portrait" class="portrait-warning">ROTATE DEVICE<br><small>HonorTD prototype uses landscape view.</small></div>
+    </main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
